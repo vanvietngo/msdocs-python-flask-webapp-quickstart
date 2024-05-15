@@ -43,12 +43,12 @@ stages:
             workingDirectory: $(projectRoot)
             displayName: "Run lint tests"
 
-          - task: ArchiveFiles@2
-            displayName: "Archive files"
-
           - script: |
               echo $(projectRoot)
               ls -la
+          - task: ArchiveFiles@2
+            displayName: "Archive files"
+
 
             inputs:
               rootFolderOrFile: "$(projectRoot)"
