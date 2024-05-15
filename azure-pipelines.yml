@@ -37,7 +37,7 @@ stages:
             displayName: "Install requirements"
 
           - script: |
-              export PATH=$HOME/.local/bin:$PATH
+              # export PATH=$HOME/.local/bin:$PATH
               	
               # pylint --disable=R,C,W1203 app.py
             workingDirectory: $(projectRoot)
@@ -45,6 +45,9 @@ stages:
 
           - task: ArchiveFiles@2
             displayName: "Archive files"
+             - script: |
+                echo $(projectRoot)
+                ls -la
             inputs:
               rootFolderOrFile: "$(projectRoot)"
               includeRootFolder: false
