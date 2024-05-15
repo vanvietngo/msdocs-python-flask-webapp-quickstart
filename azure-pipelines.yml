@@ -45,9 +45,11 @@ stages:
 
           - task: ArchiveFiles@2
             displayName: "Archive files"
-             - script: |
-                echo $(projectRoot)
-                ls -la
+
+          - script: |
+              echo $(projectRoot)
+              ls -la
+
             inputs:
               rootFolderOrFile: "$(projectRoot)"
               includeRootFolder: false
