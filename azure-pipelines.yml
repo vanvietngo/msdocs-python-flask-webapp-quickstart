@@ -12,7 +12,7 @@ variables:
   azureServiceConnectionId: "azzuredevopsconnection"
 
   # Web app name
-  webAppName: "Azuredevops"
+  webAppName: "luffyyyy"
 
   # Environment name
   environmentName: "venv"
