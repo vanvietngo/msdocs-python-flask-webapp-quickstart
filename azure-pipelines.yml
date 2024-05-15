@@ -45,6 +45,7 @@ stages:
 
           - script: |
               echo $(projectRoot)
+              pwd
               ls -la
           - task: ArchiveFiles@2
             displayName: "Archive files"
