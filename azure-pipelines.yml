@@ -36,12 +36,12 @@ stages:
             workingDirectory: $(projectRoot)
             displayName: "Install requirements"
 
-          # - script: |
-          #     export PATH=$HOME/.local/bin:$PATH
-          #     make install
-          #     make lint
-          #   workingDirectory: $(projectRoot)
-          #   displayName: "Run lint tests"
+          - script: |
+              export PATH=$HOME/.local/bin:$PATH
+              	
+              pylint --disable=R,C,W1203 app.py
+            workingDirectory: $(projectRoot)
+            displayName: "Run lint tests"
 
           - task: ArchiveFiles@2
             displayName: "Archive files"
